@@ -1,0 +1,308 @@
+@font-face {
+    /* Braille font by Yuri Kanischev, GPL License */
+    font-family: Braille;
+    src: url("kanischev_braille.ttf");
+}
+
+/**/
+/*** Стиль виджета ***/
+/**/
+div.accessible_reading_widget {
+	text-align: center;
+}
+div.arw_widget_wrapper {
+    text-align: center;
+    cursor: pointer;
+    background: #ed272e;
+    border-radius: 6px;
+    padding: 15px;
+    color: #fff;
+    display: inline-block;
+    line-height: 100%;
+}
+div.arw_widget_wrapper a {
+    color: #fff;
+    text-decoration: none;
+}
+div.arw_widget_wrapper span.dashicons {
+    text-decoration: none;
+}
+div.arw_widget_wrapper:hover {
+    text-decoration: underline;
+}
+
+/**/
+/*** Панель настроек ***/
+/**/
+
+/* Скрытие кнопки после активации */
+html.accessibleReading div.arw_widget_wrapper,
+html.accessibleReading .arw_widget_enable_button {
+    display: none;
+}
+html.accessibleReading #accessibleReadingControls {
+    z-index: 9999999;
+    position: relative;
+}
+
+html.accessibleReading #accessibleReadingControls * {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 16px;
+    letter-spacing: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-decoration: none;
+}
+html.accessibleReading #accessibleReadingControls .paramsFlex {
+    width: 100%;
+    display: flex;
+}
+
+/* Для телефонов */
+@media screen and (max-width: 600px) {
+    html.accessibleReading #accessibleReadingControls .paramsFlex {
+        flex-direction: column;
+    }
+
+    html.accessibleReading #accessibleReadingControls .param {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #000;
+        border-bottom: none;
+        padding: 10px;
+    }
+
+    html.accessibleReading #accessibleReadingControls .param:last-child {
+        border-bottom: 1px solid #000;
+    }
+
+    html.accessibleReading #accessibleReadingControls .paramName {
+        text-align: left;
+    }
+
+    html.accessibleReading #accessibleReadingControls .paramValue {
+        text-align: right;
+    }
+}
+
+/* Для компьютеров */
+@media screen and (min-width: 600px) {
+    html.accessibleReading #accessibleReadingControls .param {
+        width: fit-content;
+        flex-grow: 1;
+        border: 1px solid #000;
+        border-left: none;
+        padding: 0;
+    }
+
+    html.accessibleReading #accessibleReadingControls .param:first-child {
+        border-left: 1px solid #000;
+    }
+
+    html.accessibleReading #accessibleReadingControls .paramName {
+        border-bottom: 1px solid #000;
+    }
+
+    html.accessibleReading #accessibleReadingControls .paramName,
+    html.accessibleReading #accessibleReadingControls .paramValue {
+        padding: 10px;
+        text-align: center;
+        height: 45px;
+        line-height: 45px;
+    }
+}
+
+html.accessibleReading #accessibleReadingControls .paramName,
+html.accessibleReading #accessibleReadingControls .paramValue {
+    padding: 0;
+}
+
+html.accessibleReading #accessibleReadingControls .param {
+    background: #D6D6D6;
+}
+
+html.accessibleReading #accessibleReadingControls .paramName {
+    font-weight: bold;
+}
+
+html.accessibleReading #accessibleReadingControls .colorSchemes a {
+    width: 28px;
+    line-height: 28px;
+    text-align: center;
+}
+
+html.accessibleReading #accessibleReadingControls a {
+    display: inline-block;
+    margin: 0 3px;
+    height: 28px;
+}
+html.accessibleReading #accessibleReadingControls a:hover {
+    text-decoration: underline;
+}
+
+html.accessibleReading #accessibleReadingControls #arw_widget_disable_button {
+    cursor: pointer;
+    background: #D6D6D6;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 10px;
+    border: 1px solid #000;
+    border-top: none;
+    text-align: center;
+}
+html.accessibleReading #accessibleReadingControls .dashicons-visibility {
+    line-height: 45px;
+    font-family: dashicons;
+    font-size: 20px;
+}
+
+/**/
+/*** Accessible styles ***/
+/**/
+
+html.accessibleReading *:not(#accessibleReadingControls *),
+html.accessibleReading *:not(#accessibleReadingControls *):hover,
+html.accessibleReading *:not(#accessibleReadingControls *)::before,
+html.accessibleReading *:not(#accessibleReadingControls *)::after {
+    color: inherit !important;
+    border-color: inherit !important;
+    text-shadow: none !important;
+    box-shadow: inherit !important;
+    background-image: none !important;
+    transition: none !important;
+}
+
+/** 16 размер **/
+/* для всех элементов */
+html.accessibleReading.fontSize16 *:not(#accessibleReadingControls *) {
+    font-size: 16px !important;
+    line-height: calc(16px * 1.4) !important;
+}
+/* для жирных */
+html.accessibleReading.fontSize16 h1:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 h2:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 h3:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 h4:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 h5:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 h6:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 b:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize16 strong:not(#accessibleReadingControls *) {
+    font-size: calc(16px * 1.2) !important;
+}
+
+/** 20 размер **/
+/* для всех элементов */
+html.accessibleReading.fontSize20 *:not(#accessibleReadingControls *) {
+    font-size: 20px !important;
+    line-height: calc(20px * 1.4) !important;
+}
+/* для жирных */
+html.accessibleReading.fontSize20 h1:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 h2:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 h3:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 h4:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 h5:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 h6:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 b:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize20 strong:not(#accessibleReadingControls *) {
+    font-size: calc(20px * 1.2) !important;
+}
+
+/** 24 размер **/
+/* для всех элементов */
+html.accessibleReading.fontSize24 *:not(#accessibleReadingControls *) {
+    font-size: 24px !important;
+    line-height: calc(24px * 1.4) !important;
+}
+/* для жирных */
+html.accessibleReading.fontSize24 h1:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 h2:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 h3:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 h4:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 h5:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 h6:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 b:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize24 strong:not(#accessibleReadingControls *) {
+    font-size: calc(24px * 1.2) !important;
+}
+
+/** 28 размер **/
+/* для всех элементов */
+html.accessibleReading.fontSize28 *:not(#accessibleReadingControls *) {
+    font-size: 28px !important;
+    line-height: calc(28px * 1.4) !important;
+}
+/* для жирных */
+html.accessibleReading.fontSize28 h1:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 h2:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 h3:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 h4:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 h5:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 h6:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 b:not(#accessibleReadingControls *),
+html.accessibleReading.fontSize28 strong:not(#accessibleReadingControls *) {
+    font-size: calc(28px * 1.2) !important;
+}
+
+/*** Цветовые схемы ***/
+html.accessibleReading.colorScheme1 *:not(#accessibleReadingControls *){
+    background: #fff !important;
+    color: #000 !important;
+}
+html.accessibleReading.colorScheme2 *:not(#accessibleReadingControls *){
+    background: #000 !important;
+    color: #fff !important;
+}
+html.accessibleReading.colorScheme3 *:not(#accessibleReadingControls *){
+    background: #9DD1FF !important;
+    color: #063462 !important;
+}
+html.accessibleReading.colorScheme4 *:not(#accessibleReadingControls *){
+    background: #f7f3d6 !important;
+    color: #4d4b43 !important;
+}
+html.accessibleReading.colorScheme5 *:not(#accessibleReadingControls *){
+    background: #3b2716 !important;
+    color: #a9e44d !important;
+}
+
+/*** Скрытие изображений ***/
+html.accessibleReading.hiddenImages img:not(#accessibleReadingControls *) {
+    visibility: hidden !important;
+}
+
+/*** Кернинг ***/
+html.accessibleReading.letterSpaceInitial *:not(#accessibleReadingControls *) { 
+    letter-spacing: initial !important;
+}
+html.accessibleReading.letterSpace2 *:not(#accessibleReadingControls *) { 
+    letter-spacing: 2px !important;
+}
+html.accessibleReading.letterSpace4 *:not(#accessibleReadingControls *) { 
+    letter-spacing: 4px !important;
+}
+
+/*** Межстрочный интервал ***/
+html.accessibleReading.lineHeightNormal *:not(#accessibleReadingControls *) { 
+    line-height: normal !important;
+}
+html.accessibleReading.lineHeight2 *:not(#accessibleReadingControls *) { 
+    line-height: 2 !important;
+}
+html.accessibleReading.lineHeight4 *:not(#accessibleReadingControls *) { 
+    line-height: 4 !important;
+}
+
+/*** Шрифты ***/
+html.accessibleReading.fontFamilyArial *:not(#accessibleReadingControls *) { 
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+html.accessibleReading.fontFamilyTimes *:not(#accessibleReadingControls *) { 
+    font-family: "Times New Roman", Times, serif !important;
+}
+html.accessibleReading.fontFamilyBraille *:not(#accessibleReadingControls *) { 
+    font-family: Braille !important;
+}
