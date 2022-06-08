@@ -150,59 +150,56 @@ document.accessibleReading = {
             })
         });
     },
-    settingsHtml: `
-<div class="paramsFlex">
-    <div class="param">
-        <div class="paramName">Размер шрифта</div>
-        <div class="paramValue">
-            <a href="#" arw-fontSize="16" style="font-size: 16px">A</a>
-            <a href="#" arw-fontSize="20" style="font-size: 20px">A</a>
-            <a href="#" arw-fontSize="24" style="font-size: 24px">A</a>
-            <a href="#" arw-fontSize="28" style="font-size: 28px">A</a>
-        </div>
-    </div>
-    <div class="param">
-        <div class="paramName">Цветовая схема</div>
-        <div class="paramValue colorSchemes">
-            <a href="#" arw-colorScheme="1" style="background: #ffffff; color: #000000;">A</a>
-            <a href="#" arw-colorScheme="2" style="background: #000000; color: #ffffff;">A</a>
-            <a href="#" arw-colorScheme="3" style="background: #9DD1FF; color: #063462;">A</a>
-            <a href="#" arw-colorScheme="4" style="background: #f7f3d6; color: #4d4b43;">A</a>
-            <a href="#" arw-colorScheme="5" style="background: #3b2716; color: #a9e44d;">A</a>
-        </div>
-    </div>
-    <div class="param">
-        <div class="paramName">Изображения</div>
-        <div class="paramValue">
-            <a href="#" arw-hideImages="false">Выкл.</a>|<a href="#" arw-hideImages="true">Вкл.</a>
-        </div>
-    </div>
-    <div class="param">
-        <div class="paramName">Кернинг</div>
-        <div class="paramValue">
-            <a href="#" arw-letterSpace="Initial">Маленький</a>|<a href="#" arw-letterSpace="2">Средний</a>|<a
-                href="#" arw-letterSpace="4">Большой</a>
-        </div>
-    </div>
-    <div class="param">
-        <div class="paramName">Межстрочный интервал</div>
-        <div class="paramValue">
-            <a href="#" arw-lineHeight="Normal">Маленький</a>|<a href="#" arw-lineHeight="2">Средний</a>|<a
-                href="#" arw-lineHeight="4">Большой</a>
-        </div>
-    </div>
-    <div class="param">
-        <div class="paramName">Шрифт</div>
-        <div class="paramValue">
-            <a href="#" arw-fontFamily="Arial">Без засечек</a>|<a href="#" arw-fontFamily="Times">С
-                засечками</a>|<a href="#" arw-fontFamily="Braille">Брайля</a>
-        </div>
-    </div>
-</div>
-<div id="arw_widget_disable_button">
-    <span class="dashicons dashicons-visibility"></span> <a href="#">Обычная версия</a>
-</div>
-`,
+    settingsHtml: '\
+<div class="paramsFlex">\
+    <div class="param">\
+        <div class="paramName">Размер шрифта</div>\
+        <div class="paramValue">\
+            <a href="#" arw-fontSize="16" style="font-size: 16px">A</a>\
+            <a href="#" arw-fontSize="20" style="font-size: 20px">A</a>\
+            <a href="#" arw-fontSize="24" style="font-size: 24px">A</a>\
+            <a href="#" arw-fontSize="28" style="font-size: 28px">A</a>\
+        </div>\
+    </div>\
+    <div class="param">\
+        <div class="paramName">Цветовая схема</div>\
+        <div class="paramValue colorSchemes">\
+            <a href="#" arw-colorScheme="1" style="background: #ffffff; color: #000000;">A</a>\
+            <a href="#" arw-colorScheme="2" style="background: #000000; color: #ffffff;">A</a>\
+            <a href="#" arw-colorScheme="3" style="background: #9DD1FF; color: #063462;">A</a>\
+            <a href="#" arw-colorScheme="4" style="background: #f7f3d6; color: #4d4b43;">A</a>\
+            <a href="#" arw-colorScheme="5" style="background: #3b2716; color: #a9e44d;">A</a>\
+        </div>\
+    </div>\
+    <div class="param">\
+        <div class="paramName">Изображения</div>\
+        <div class="paramValue">\
+            <a href="#" arw-hideImages="false">Выкл.</a>|<a href="#" arw-hideImages="true">Вкл.</a>\
+        </div>\
+    </div>\
+    <div class="param">\
+        <div class="paramName">Кернинг</div>\
+        <div class="paramValue">\
+            <a href="#" arw-letterSpace="Initial">Маленький</a>|<a href="#" arw-letterSpace="2">Средний</a>|<a href="#" arw-letterSpace="4">Большой</a>\
+        </div>\
+    </div>\
+    <div class="param">\
+        <div class="paramName">Межстрочный интервал</div>\
+        <div class="paramValue">\
+            <a href="#" arw-lineHeight="Normal">Маленький</a>|<a href="#" arw-lineHeight="2">Средний</a>|<a href="#" arw-lineHeight="4">Большой</a>\
+        </div>\
+    </div>\
+    <div class="param">\
+        <div class="paramName">Шрифт</div>\
+        <div class="paramValue">\
+            <a href="#" arw-fontFamily="Arial">Без засечек</a>|<a href="#" arw-fontFamily="Times">С засечками</a>|<a href="#" arw-fontFamily="Braille">Брайля</a>\
+        </div>\
+    </div>\
+</div>\
+<div id="arw_widget_disable_button">\
+    <span class="dashicons dashicons-visibility"></span> <a href="#">Обычная версия</a>\
+</div>\
+',
 };
 
 document.addEventListener("DOMContentLoaded", () => {
