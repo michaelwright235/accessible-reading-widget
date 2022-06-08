@@ -5,7 +5,7 @@ Plugin URI: https://github.com/michaelwright235/accessible-reading-widget
 Description: Виджет, позволяющий включить доступное чтение сайта для слабовидящих людей по ГОСТ Р 52872-2007.
 Author: Michael Wright
 Author URI: https://github.com/michaelwright235
-Version: 1.0
+Version: 1.1
 License: GPL v2
 Text Domain: accessible-reading-widget
 */
