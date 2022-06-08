@@ -197,7 +197,7 @@ document.accessibleReading = {
     </div>\
 </div>\
 <div id="arw_widget_disable_button">\
-    <span class="dashicons dashicons-visibility"></span> <a href="#">Обычная версия</a>\
+    <span class="arwVisibility"></span><a href="#">Обычная версия</a>\
 </div>\
 ',
 };

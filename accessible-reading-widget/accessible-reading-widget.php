@@ -25,7 +25,7 @@ class AccessibleReadingWidget extends WP_Widget {
 		?>
 		<div class="arwWrapper arwEnableButton">
 			<?php if($show_icon === 'on') {?>
-			<span class="dashicons dashicons-visibility"></span>
+			<span class="arwVisibility"></span>
 			<?php } ?>
 			<a href="#"><?php echo $title; ?></a>
 		</div>

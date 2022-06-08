@@ -24,13 +24,24 @@ div.arwWrapper a {
     color: #fff;
     text-decoration: none;
 }
-div.arwWrapper span.dashicons {
-    text-decoration: none;
-}
 div.arwWrapper:hover {
     text-decoration: underline;
 }
 
+.arwVisibility {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: none;
+    text-rendering: auto;
+    width: 20px;
+    height: 20px;
+    -webkit-mask-image: url("visibility.svg");
+    mask-image: url("visibility.svg");
+    background-color: #fff;
+    font-size: 20px;
+    vertical-align: text-bottom;
+}
 
 /**/
 /*** Панель настроек ***/
@@ -154,11 +165,11 @@ html.accessibleReading #accessibleReadingControls #arw_widget_disable_button {
     border-top: none;
     text-align: center;
 }
-html.accessibleReading #accessibleReadingControls .dashicons-visibility {
+html.accessibleReading #accessibleReadingControls .arwVisibility {
+    background-color:#000;
     line-height: 45px;
-    font-family: dashicons;
-    font-size: 20px;
 }
+
 
 /**/
 /*** Accessible styles ***/
