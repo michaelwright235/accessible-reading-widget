@@ -204,7 +204,7 @@ document.accessibleReading = {
 
 document.addEventListener("DOMContentLoaded", () => {
     // Регистрируем кнопки
-    document.querySelectorAll(".arw_widget_enable_button").forEach(function(node) {
+    document.querySelectorAll(".arwEnableButton").forEach(function(node) {
         document.accessibleReading.bind( node );
     });
 

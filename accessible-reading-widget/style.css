@@ -10,7 +10,7 @@
 div.accessible_reading_widget {
 	text-align: center;
 }
-div.arw_widget_wrapper {
+div.arwWrapper {
     text-align: center;
     cursor: pointer;
     background: #ed272e;
@@ -20,24 +20,25 @@ div.arw_widget_wrapper {
     display: inline-block;
     line-height: 100%;
 }
-div.arw_widget_wrapper a {
+div.arwWrapper a {
     color: #fff;
     text-decoration: none;
 }
-div.arw_widget_wrapper span.dashicons {
+div.arwWrapper span.dashicons {
     text-decoration: none;
 }
-div.arw_widget_wrapper:hover {
+div.arwWrapper:hover {
     text-decoration: underline;
 }
+
 
 /**/
 /*** Панель настроек ***/
 /**/
 
 /* Скрытие кнопки после активации */
-html.accessibleReading div.arw_widget_wrapper,
-html.accessibleReading .arw_widget_enable_button {
+html.accessibleReading div.arwWrapper,
+html.accessibleReading .arwEnableButton {
     display: none;
 }
 html.accessibleReading #accessibleReadingControls {
